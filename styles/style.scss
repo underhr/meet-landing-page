@@ -29,6 +29,7 @@ $slate900: #28283D;
 
 *{
     margin: 0;
+    box-sizing: border-box;
 }
 
 /* container styles */
@@ -56,7 +57,7 @@ header{
     justify-content:space-between;
     text-align:center;
     margin-top:64px;
-    margin-bottom:130px;
+    margin-bottom:143px;
     width:100vw;
     overflow:hidden;
 
@@ -107,11 +108,11 @@ article {
         @include center;
         margin-top: 64px;
         margin-bottom: 64px;
+        gap: 32px;
         img{
             border-radius: 8px;
             width:256px;
             height:256px;
-            margin:16px;
         }
     }
     #articletxt {
@@ -133,21 +134,28 @@ article {
 }
 
 #circle2 {
-    margin-bottom: -16px;
+    margin-top: 62px;
+    margin-bottom: -28px;
+    z-index: 1;
 }
 
 footer {
+    @include center;
     width: 100vw;
     height: 300px;
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
     gap: 32px;
     background-image: url('../assets/desktop/image-footer.png');
     background-size: cover;
 
+    > div {
+        @include center;
+        justify-content: space-evenly;
+        width: 100%;
+    }
+
     h2 {
         @include text(40px, white, 800, 110%);
+        width: 445px;
     }
     p {
         width: 355px;
@@ -163,41 +171,5 @@ footer {
         .version {
             color: $purple300
         }
-    }
-}
-
-/* tablet view */
-@media only screen and (max-width:1160px){
-    body{
-        padding-top: 48px;
-    }
-    .tabletHero{
-        display: block  !important;
-        width: 100vw;
-    }
-    .desktopHero{
-        display: none;
-    }
-    header{
-        flex-direction: column;
-    }
-    #headerText{
-        margin-top:72px;
-        margin-bottom:64px;
-    }
-    footer {
-        background-image: url('../assets/tablet/image-footer.png');
-    }
-}
-
-/* phone view */
-@media only screen and (max-width:375px){
-    #headerText{
-        margin-top:48px;
-        margin-bottom:120px;
-        text-shadow: none;
-    }
-    footer {
-        background-image: url('../assets/mobile/image-footer.png');
     }
 }

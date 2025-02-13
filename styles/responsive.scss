@@ -1,0 +1,123 @@
+@mixin center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* tablet view */
+@media only screen and (max-width:1160px){
+    body{
+        padding-top: 48px;
+    }
+
+    header{
+        flex-direction: column;
+        margin-bottom: 120px;
+        .tabletHero{
+            display: block  !important;
+            width: 100vw;
+        }
+        .desktopHero{
+            display: none;
+        }
+        #headerText{
+            margin-top:72px;
+            h1 {
+                font-size: 48px;
+            }
+        }
+    }
+
+    article {
+        #imageGallery{
+            gap: 24px;
+            img {
+                width:152px;
+                height:152px;
+            }
+        }
+        #articletxt {
+            h3 {
+                font-size: 14px;
+            }
+            h2 {
+                font-size: 36px;
+            }
+        }
+    }
+
+    footer {
+        background-image: url('../assets/tablet/image-footer.png');
+        gap: 24px;
+        > div {
+            flex-direction: column;
+            text-align: center;
+            margin-left :32px;
+            margin-right: 32px;
+        }
+        h2 {
+            width: 100%;
+            font-size: 36px;
+        }
+        p {
+            width: 100%;
+            font-size: 16px;
+
+        }
+    }
+}
+
+/* phone view */
+@media only screen and (max-width:700px){
+    header {
+        margin-bottom: 64px;
+        #headerText{
+            margin:48px 32px 120px 32px;
+            text-shadow: none;
+            margin-top: 48px;
+            margin-bottom: 0px;
+
+            h1 {
+                font-size: 40px;
+            }
+        }
+        #buttons {
+            flex-direction: column;
+        }
+    }
+    
+    article {
+        @include center;
+        flex-direction: column;
+        #imageGallery {
+            gap: 16px;
+            flex-wrap: wrap;
+            width: 304px;
+            img {
+                height: 144px;
+                width: 144px;
+            }
+        }
+        #articletxt {
+            width: 100vw;
+            padding-left: 32px;
+            padding-right: 32px;
+            h3 {
+                font-size: 12px;
+            }
+            h2 {
+                font-size: 32px;
+            }
+        }
+    }
+
+    footer {
+        background-image: url('../assets/mobile/image-footer.png');
+        height: fit-content;
+        padding-top: 64px;
+        padding-bottom: 64px;
+        h2 {
+            font-size: 32px;
+        }
+    }
+}

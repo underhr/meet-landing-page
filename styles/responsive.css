@@ -1,0 +1,108 @@
+/* tablet view */
+@media only screen and (max-width: 1160px) {
+  body {
+    padding-top: 48px;
+  }
+  header {
+    flex-direction: column;
+    margin-bottom: 120px;
+  }
+  header .tabletHero {
+    display: block !important;
+    width: 100vw;
+  }
+  header .desktopHero {
+    display: none;
+  }
+  header #headerText {
+    margin-top: 72px;
+  }
+  header #headerText h1 {
+    font-size: 48px;
+  }
+  article #imageGallery {
+    gap: 24px;
+  }
+  article #imageGallery img {
+    width: 152px;
+    height: 152px;
+  }
+  article #articletxt h3 {
+    font-size: 14px;
+  }
+  article #articletxt h2 {
+    font-size: 36px;
+  }
+  footer {
+    background-image: url("../assets/tablet/image-footer.png");
+    gap: 24px;
+  }
+  footer > div {
+    flex-direction: column;
+    text-align: center;
+    margin-left: 32px;
+    margin-right: 32px;
+  }
+  footer h2 {
+    width: 100%;
+    font-size: 36px;
+  }
+  footer p {
+    width: 100%;
+    font-size: 16px;
+  }
+}
+/* phone view */
+@media only screen and (max-width: 700px) {
+  header {
+    margin-bottom: 64px;
+  }
+  header #headerText {
+    margin: 48px 32px 120px 32px;
+    text-shadow: none;
+    margin-top: 48px;
+    margin-bottom: 0px;
+  }
+  header #headerText h1 {
+    font-size: 40px;
+  }
+  header #buttons {
+    flex-direction: column;
+  }
+  article {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+  article #imageGallery {
+    gap: 16px;
+    flex-wrap: wrap;
+    width: 304px;
+  }
+  article #imageGallery img {
+    height: 144px;
+    width: 144px;
+  }
+  article #articletxt {
+    width: 100vw;
+    padding-left: 32px;
+    padding-right: 32px;
+  }
+  article #articletxt h3 {
+    font-size: 12px;
+  }
+  article #articletxt h2 {
+    font-size: 32px;
+  }
+  footer {
+    background-image: url("../assets/mobile/image-footer.png");
+    height: -moz-fit-content;
+    height: fit-content;
+    padding-top: 64px;
+    padding-bottom: 64px;
+  }
+  footer h2 {
+    font-size: 32px;
+  }
+}/*# sourceMappingURL=responsive.css.map */

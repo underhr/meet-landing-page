@@ -4,6 +4,7 @@
 }
 * {
   margin: 0;
+  box-sizing: border-box;
 }
 
 /* container styles */
@@ -44,7 +45,7 @@ header {
   justify-content: space-between;
   text-align: center;
   margin-top: 64px;
-  margin-bottom: 130px;
+  margin-bottom: 143px;
   width: 100vw;
   overflow: hidden;
 }
@@ -103,12 +104,12 @@ article #imageGallery {
   justify-content: center;
   margin-top: 64px;
   margin-bottom: 64px;
+  gap: 32px;
 }
 article #imageGallery img {
   border-radius: 8px;
   width: 256px;
   height: 256px;
-  margin: 16px;
 }
 article #articletxt {
   width: 544px;
@@ -138,18 +139,27 @@ article #articletxt h2 {
 }
 
 #circle2 {
-  margin-bottom: -16px;
+  margin-top: 62px;
+  margin-bottom: -28px;
+  z-index: 1;
 }
 
 footer {
-  width: 100vw;
-  height: 300px;
   display: flex;
   align-items: center;
-  justify-content: space-evenly;
+  justify-content: center;
+  width: 100vw;
+  height: 300px;
   gap: 32px;
   background-image: url("../assets/desktop/image-footer.png");
   background-size: cover;
+}
+footer > div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  justify-content: space-evenly;
+  width: 100%;
 }
 footer h2 {
   font-size: 40px;
@@ -157,6 +167,7 @@ footer h2 {
   font-weight: 800;
   line-height: 110%;
   font-family: redhat;
+  width: 445px;
 }
 footer p {
   width: 355px;
@@ -176,39 +187,4 @@ footer #downloadbtn-purple:hover {
 }
 footer #downloadbtn-purple .version {
   color: #D9B8FF;
-}
-
-/* tablet view */
-@media only screen and (max-width: 1160px) {
-  body {
-    padding-top: 48px;
-  }
-  .tabletHero {
-    display: block !important;
-    width: 100vw;
-  }
-  .desktopHero {
-    display: none;
-  }
-  header {
-    flex-direction: column;
-  }
-  #headerText {
-    margin-top: 72px;
-    margin-bottom: 64px;
-  }
-  footer {
-    background-image: url("../assets/tablet/image-footer.png");
-  }
-}
-/* phone view */
-@media only screen and (max-width: 375px) {
-  #headerText {
-    margin-top: 48px;
-    margin-bottom: 120px;
-    text-shadow: none;
-  }
-  footer {
-    background-image: url("../assets/mobile/image-footer.png");
-  }
 }/*# sourceMappingURL=style.css.map */
